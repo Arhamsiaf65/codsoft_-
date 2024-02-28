@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+:root{
+    --background-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #860910;   
+}
+html{
+    overflow-x: hidden;
+    font-size: 63%;
+}
+body{
+    background: var(--background-color);
+    color: var(--text-bg-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color);
+    padding: 2rem 10%;
+    z-index: 100;
+    font-size: 5vh;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    cursor: default;
+}
+.logo span{
+    color: var(--main-color);
+    font-weight: 800;
+    font-style: italic;
+    font-variant: small-caps;
+}
+.navBar{
+    font-size: 2rem;
+    display: flex;
+    gap: 1vw;
+}
+.navBar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    padding: 1vh 10px;
+    transition: all ease .3s;
+}
+.navBar a:hover{
+    color: var(--main-color);
+}
+.navBar a.active{
+    color: var(--main-color);
+}
+#menuIcon{
+    color: var(--text-color);
+    font-size: 3.6rem;
+    display: none;
+}
+#home{
+    display: flex;
+    align-items: center;
+}
+.homeContent h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.homeContent h3 span{
+    color: var(--main-color);
+}
+.homeContent h1{
+    font-size: 5.6rem;
+    line-height: 1.3;
+}
+.homeContent p{
+    font-size: 1.6rem;
+}
+.socialMedia a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    color: var(--main-color);
+    height: 4rem;
+    background: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 3rem;
+    margin: 2rem 1rem 2rem;
+    transition: all ease .5s;
+}
+
+.socialMedia a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+.btn{
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 0.5rem 0.8rem;
+    color: var(--second-bg-color);
+    background: var(--main-color);
+    box-shadow: 0 0 3rem var(--main-color);
+    border-radius: 1.9rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    transition: all .5s;
+}
+.btn:hover{
+   box-shadow: none;
+}
+#homeImage img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}
+
+#about{
+    display: flex;
+    align-items: center;
+}
+#aboutImage img{
+    width: 35vw;
+    margin-right: 2vw;
+}
+#aboutContent h2{
+    font-size: 4rem;
+    line-height: 6vh;
+}
+#aboutContent h2 span{
+    color: var(--main-color);
+}
+#aboutContent h3{
+    font-size: 2.3rem;
+}
+#aboutContent p{
+    font-size: 1.5rem;
+    margin: 3vh 0;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services h1{
+    font-size: 4rem;
+    padding-bottom: 4rem;
+}
+.services h1 span{
+    color: var(--main-color);
+}
+.services div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.serviceCard{
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+    padding: 4rem 3rem;
+    box-shadow: 0rem 0rem 1rem var(--main-color);
+    flex-basis: 25rem;
+}
+.serviceCard h1{
+    font-size: 2.5rem;
+    padding: 0;
+}
+.serviceCard .cardIcon{
+    font-size: 6rem;
+    color: var(--main-color);
+}
+.serviceCard .cardContent{
+    font-size: 1.4rem;
+}
+.projects h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.projects h1 span{
+    color: var(--main-color);
+}
+.sampleProjects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projectBox{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--background-color);
+    overflow: hidden;
+    display: flex;
+}
+.projectBox img{
+    width: 100%;
+    transition: all .5s;
+}
+.projectBox:hover img{
+    transform: scale(1.1);
+}
+.pLayer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+.projectBox:hover .pLayer{
+    transform: translate(0%);
+}
+.pLayer h4{
+    font-size: 3rem;
+}
+.pLayer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.pLayer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.pLayer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+.contact h2{
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact h2 span{
+    color: var(--main-color);
+}
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.inputBox input , .contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius:  1rem;
+    margin: .7rem 0;
+}
+.contact form textarea{
+    resize: none;
+}
+.inputBox input {
+    width: 49%;
+}
+form .btn{
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.footer{
+    background: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerText{
+    padding: 2vh 0;
+    font-size: 1.7rem;
+}
+.footerIcon{
+    position: absolute;
+    right: 15rem;
+    transition: all ease .3s;
+}
+.footerIcon:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footerIcon i{
+    background-color: var(--main-color);
+    color: black;
+    font-size: 2.6rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px){
+    
+    #menuIcon{
+        display: block;
+    }
+    .navBar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        background: var(--background-color);
+        border-top:  .1rem solid rgba(0, 0, 0, .1);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)s;
+        display: none;
+    }
+    .navBar.active{
+        display: block;
+    }
+    .navBar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .homeContent h3{
+        font-size: 2.6rem;
+    }
+    .homeContent h1{
+        font-size: 5rem;
+    }
+    .homeContent p{
+        font-size: 1.8rem;
+    }
+    #homeImage img{
+        width: 60vw;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #aboutImage img{
+        width: 50vw;
+        margin-right: 2vw;
+    }
+    #aboutContent{
+        order: -1;
+    }
+     .serviceCard{
+        flex-basis: 35rem;
+    }
+    
+    .sampleProjects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .projects h1{
+        margin-bottom: 3rem;
+    }
+    .projectBox{
+       padding: 2rem 0;
+    }
+    .footerIcon{
+        position: absolute;
+        right: 2rem;
+        transition: all ease .3s;
+    }
+}
+@media (max-width: 617px){
+    .sampleProjects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer{
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .footerText{
+        font-size: 1.2rem;
+        overflow: hidden;
+    }
+    .footerIcon{
+        position: relative;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    #aboutImage img{
+        width: 70vw;
+    }
+    #homeImage img{
+        width: 70vw;
+    }
+    .inputBox input{
+        width: 100%;
+    }
+}
+@media (max-width: 390px){
+    #aboutImage img{
+        width: 90vw;
+    }
+    #homeImage img{
+        width: 90vw;
+    }
+}
